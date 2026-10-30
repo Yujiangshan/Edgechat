@@ -1,6 +1,8 @@
 import bridge from './instance-bridge/zh-TW.js';
 import rbac from './rbac/zh-TW.js';
+import verification from './login-verification/zh-TW.js';
 export default {
+  ...verification,
   'maintenance.telegramNotifications': 'TelegramNotifications DO',
   'maintenance.method.telegramNotifications': 'TELEGRAM_NOTIFICATIONS binding + 內部 health 請求',
   ...rbac,
@@ -279,6 +281,7 @@ export default {
   "chat.groupSettings": "群設置",
   "chat.loadEarlier": "加載更早",
   "chat.loadingMessages": "加載中...",
+  "chat.refreshFailed": "刷新失敗，正在顯示已儲存的訊息。",
   "chat.noMessages": "暫無消息",
   "chat.addAttachment": "添加附件",
   "chat.fileSelectionFailed": "無法讀取所選文件，請重新選擇。",
@@ -287,6 +290,9 @@ export default {
   "chat.mentionedMe": "有人@我",
   "chat.send": "發送",
   "chat.realtimeNotReady": "實時連接尚未就緒，請稍後重試",
+  "chat.messagePending": "發送中",
+  "chat.messageUnconfirmed": "尚未確認送達",
+  "chat.retryMessage": "重試發送",
   "chat.sessionInvalid": "登錄狀態已失效，請重新登錄。",
   "notifications.unavailable": "通知不可用",
   "notifications.permissionDenied": "權限禁用",

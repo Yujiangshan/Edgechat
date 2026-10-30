@@ -2,7 +2,9 @@ import maintenanceEn from './maintenance/en-US.js';
 import bridge from './instance-bridge/en-US.js';
 
 import rbac from './rbac/en-US.js';
+import verification from './login-verification/en-US.js';
 export default {
+  ...verification,
   ...rbac,
   'call.limit': 'The one-hour call limit was reached. Please call again.',
   'call.voice': 'Voice call',
@@ -206,6 +208,7 @@ export default {
   'chat.groupSettings': 'Group settings',
   'chat.loadEarlier': 'Load earlier',
   'chat.loadingMessages': 'Loading...',
+  'chat.refreshFailed': 'Refresh failed. Showing previously loaded messages.',
   'chat.noMessages': 'No messages',
 	  'chat.addAttachment': 'Add attachment',
 	  'chat.fileSelectionFailed': 'The selected file could not be read. Please choose it again.',
@@ -214,6 +217,9 @@ export default {
   'chat.mentionedMe': 'Mentioned you',
   'chat.send': 'Send',
   'chat.realtimeNotReady': 'The realtime connection is not ready yet. Please try again.',
+  'chat.messagePending': 'Sending',
+  'chat.messageUnconfirmed': 'Delivery not confirmed',
+  'chat.retryMessage': 'Retry sending',
   'chat.sessionInvalid': 'Your session is no longer valid. Please sign in again.',
   'notifications.unavailable': 'Notifications unavailable',
   'notifications.permissionDenied': 'Permission denied',

@@ -2,7 +2,9 @@ import maintenanceZh from './maintenance/zh-CN.js';
 import bridge from './instance-bridge/zh-CN.js';
 
 import rbac from './rbac/zh-CN.js';
+import verification from './login-verification/zh-CN.js';
 export default {
+  ...verification,
   ...rbac,
   'call.limit': '本次通话已达到 1 小时上限，请重新呼叫。',
   'stealth.title': '隐身模式',
@@ -185,6 +187,7 @@ export default {
   'chat.groupSettings': '群设置',
   'chat.loadEarlier': '加载更早',
   'chat.loadingMessages': '加载中...',
+  'chat.refreshFailed': '刷新失败，正在显示已保存的消息。',
   'chat.noMessages': '暂无消息',
 	  'chat.addAttachment': '添加附件',
 	  'chat.fileSelectionFailed': '无法读取所选文件，请重新选择。',
@@ -193,6 +196,9 @@ export default {
   'chat.mentionedMe': '有人@我',
   'chat.send': '发送',
   'chat.realtimeNotReady': '实时连接尚未就绪，请稍后重试',
+  'chat.messagePending': '发送中',
+  'chat.messageUnconfirmed': '尚未确认送达',
+  'chat.retryMessage': '重试发送',
   'chat.sessionInvalid': '登录状态已失效，请重新登录。',
   'notifications.unavailable': '通知不可用',
   'notifications.permissionDenied': '权限禁用',

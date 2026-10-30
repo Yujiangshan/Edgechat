@@ -59,6 +59,11 @@ async function request(path, options = {}) {
 }
 
 export default {
+  loginVerification() { return request('/auth/verification'); },
+  adminLoginVerification() { return request('/admin/login-verification'); },
+  saveAdminLoginVerification(body) {
+    return request('/admin/login-verification', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body });
+  },
   authorization() { return request('/me/authorization'); },
   rbacRoles(offset = 0) { return request(`/admin/rbac/roles?offset=${offset}`); },
   rbacPermissions() { return request('/admin/rbac/permissions'); },
@@ -112,10 +117,10 @@ export default {
     });
   },
   session() {
-    return request('/auth/session');
+    return request('/auth/session', { signal: AbortSignal.timeout(10000) });
   },
   getSite() {
-    return request('/site');
+    return request('/site', { signal: AbortSignal.timeout(10000) });
   },
   changePassword(payload) {
     return request('/auth/change-password', {
